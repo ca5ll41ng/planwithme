@@ -1,0 +1,9 @@
+node_modules/
+dist/
+debug-shots/
+test-data/
+*.log
+.npmrc
+debug-shots/
+test-data/
+.tmp-forensics/

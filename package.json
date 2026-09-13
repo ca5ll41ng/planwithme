@@ -1,0 +1,40 @@
+{
+  "name": "planwithme",
+  "productName": "PlanWithMe",
+  "version": "1.0.0",
+  "description": "本地日程本：24小时时间轴 / 每日·每周计划自动顺延 / 长期任务 / 周期打卡 / 随心记",
+  "main": "main.js",
+  "author": "ca5ll41ng",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ca5ll41ng/planwithme.git"
+  },
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.planwithme.app",
+    "productName": "PlanWithMe",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**",
+      "assets/**"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
+    }
+  }
+}
