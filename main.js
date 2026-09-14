@@ -190,6 +190,11 @@ function registerIpc() {
   });
 }
 
+let win = null;
+let tray = null;
+let quitting = false;
+let currentHotkey = null;
+
 const gotLock = app.requestSingleInstanceLock();
 if (!gotLock) {
   app.quit();
